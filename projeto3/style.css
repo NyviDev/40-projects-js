@@ -97,4 +97,11 @@ button:hover {
     border-radius: 5px;
 
     margin-top: 10px;
+
+    transition: background-color 0.1s;
+}
+
+.ramdom-btn:active {
+    background-color: #941313;
+    color: #fff;
 }
