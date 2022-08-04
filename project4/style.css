@@ -3,10 +3,16 @@
     margin: 0;
 }
 
+
 :root {
     --bg-yellow: #fffff0;
     --red: #941313;
+    --bg-body: #a0421c38;
     --transition: all 0.3s linear;
+}
+
+body {
+    background-color: var(--bg-body);
 }
 
 button {
