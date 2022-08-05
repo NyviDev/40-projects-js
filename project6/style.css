@@ -1,0 +1,98 @@
+* {
+    font-family: monospace;
+    margin: 0;
+}
+
+:root {
+    --bg-yellow: #fffff0;
+    --red: #941313;
+    --bg-body: #a0421c38;
+    --transition: all 0.3s linear;
+    --shadow: 4px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.bg {
+    height: 100vh;
+    background-image: url('./hero.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner {
+    background-color: var(--bg-yellow);
+    width: 90vw;
+    max-width: 620px;
+    padding: 4rem 0;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.btn-banner {
+    background-color: var(--red);
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-body);
+    visibility: hidden;
+}
+
+.open-modal {
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--bg-yellow);
+    border-radius: 10px;
+    width: 90vw;
+    max-width: 620px;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+.icon-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--red);
+    font-size: 30px;
+}
+
