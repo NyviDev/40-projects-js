@@ -57,6 +57,8 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 nextBtn.addEventListener('click', () => {
+    console.log(currentItem)
+
     currentItem++;
     if (currentItem > reviews.length - 1) {
         currentItem = 0;
@@ -68,10 +70,11 @@ nextBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', () => {
     currentItem--;
-    if (currentItem < reviews.length - 1) {
+    if (currentItem < 0) {
         currentItem = 3;
     }
-
+    console.log(currentItem)
+    
     showPerson(currentItem)
 })
 
