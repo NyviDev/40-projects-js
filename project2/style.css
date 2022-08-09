@@ -3,6 +3,18 @@
     text-align: center;
 }
 
+:root {
+    --bg-yellow: #fffff0;
+    --red: #941313;
+    --bg-body: #a0421c38;
+    --transition: all 0.3s linear;
+    --shadow: 4px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--bg-yellow);
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -13,7 +25,7 @@
 }
 
 .box {
-    background-color: rgba(0, 0, 0, 0.76);
+    background-color: var(--red);
     color: #fff;
     
     display:flex;
@@ -27,7 +39,7 @@
 }
 
 button {
-    background-color: #fff;
+    background-color: var(--bg-yellow);
     
     border: none;
     border-radius: 10px;

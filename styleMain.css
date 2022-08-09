@@ -3,6 +3,18 @@
     text-align: center;
 }
 
+:root {
+    --bg-yellow: #fffff0;
+    --red: #941313;
+    --bg-body: #a0421c38;
+    --transition: all 0.3s linear;
+    --shadow: 4px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--bg-body);
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -19,7 +31,7 @@
 }
 
 .container a {
-    color: rgb(78, 39, 248);
+    color: var(--red);
 
 }
 .container p {
@@ -32,7 +44,7 @@
 
 .pages {
 
-    background-color: rgb(172, 154, 250);
+    background-color: var(--red);
 
     border-radius: 20px 20px 0 0;
     border: solid 1px #000;
@@ -43,19 +55,15 @@
 
 .pages a{
     font-size: 18px;
-    color: #fff;
+    color: var(--bg-yellow);
 
     text-decoration: none;
 }
 
 .pages li {
-    color: #fff;
+    color: var(--bg-yellow);
 
     font-size: 18px;
     margin-bottom: 10px;
     text-align: start;
-}
-
-.pages a:hover {
-
 }
