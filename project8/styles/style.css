@@ -1,0 +1,145 @@
+* {
+  font-family: monospace;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  border: 2px solid #941313;
+  color: #941313;
+  background-color: #fffff0;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #941313;
+  color: #fffff0;
+  transition: all 0.3s linear;
+}
+
+body {
+  background-color: rgba(160, 66, 28, 0.2196078431);
+}
+
+.line {
+  background-color: #941313;
+  width: 70px;
+  height: 5px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin: 30px 0 10px 0;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: row;
+  padding: 0 1rem;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 2rem;
+  max-width: 400px;
+}
+.container .photo {
+  display: block;
+  height: 200px;
+  width: 410px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: #941313 solid 5px;
+  border-radius: 10px;
+}
+
+.article-center {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+  border-bottom: 1px dashed;
+  padding-bottom: 10px;
+}
+.header-container .name {
+  font-size: 16px;
+}
+.header-container .price {
+  font-size: 15px;
+  color: #941313;
+}
+
+.info-article {
+  margin-top: 20px;
+}
+.info-article .info {
+  margin-top: 15px;
+  line-height: 23px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (min-width: 850px) {
+  .btn-container {
+    gap: 2rem;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    max-width: 640px;
+    gap: 20px;
+  }
+  .container .photo {
+    height: 175px;
+    width: 255px;
+  }
+  .container .info-article {
+    margin: 0;
+  }
+  .container .info-article .info {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .container {
+    max-width: 580px;
+    margin: 0;
+  }
+  .container .photo {
+    height: 150px;
+    width: 227px;
+  }
+}/*# sourceMappingURL=style.css.map */
