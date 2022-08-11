@@ -1,0 +1,93 @@
+$primaryColor: #941313;
+$secondColor: #fffff0;
+$bg-red: #a0421c38;
+$transition: all 0.3s linear;
+
+@mixin flexContainer($direction, $directionY, $directionX) {
+    display: flex;
+    justify-content: $directionX;
+    align-items: $directionY;
+    flex-direction: $direction;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    margin: 0;
+}
+
+header {
+    @include flexContainer(row, center, center);
+    min-height: 100vh;
+    .video-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    h1 {
+        
+        text-transform: uppercase;
+        text-align: center;
+
+        font-size: 45px;
+        color: $secondColor;
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+
+    .switch-btn {
+
+        @include flexContainer(row, center, space-around);
+        position: absolute;
+        bottom: 3rem;
+        left: 3rem;
+
+        background-color: $secondColor;
+        padding: 5px 0;
+        width: 120px;
+        border-radius: 10px;
+        color: $primaryColor;
+        text-transform: capitalize;
+        font-size: 12px;
+        transition: $transition;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .switch {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: block;
+            background-color: $primaryColor;
+            border-radius: 8px;
+            transition: $transition;
+        }
+    }
+
+    .slide .switch{
+        left: 50%;
+    }
+
+}
