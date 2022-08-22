@@ -98,6 +98,7 @@ function displayButtons(container) {
   
   container.innerHTML = categoryButton
   const btns = document.querySelectorAll('.filter-btn')
+  console.log(btns)
   btns.forEach((btn) => {
     btn.addEventListener('click', e => {
       const option = e.currentTarget.textContent

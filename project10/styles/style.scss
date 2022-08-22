@@ -1,0 +1,230 @@
+$primaryColor: #941313;
+$secondColor: #fffff0;
+$bg-red: #a0421c38;
+$transition: all 0.3s linear;
+
+@mixin flexContainer($direction, $directionY, $directionX) {
+    display: flex;
+    justify-content: $directionX;
+    align-items: $directionY;
+    flex-direction: $direction;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    margin: 0;
+}
+
+nav {
+    background-color: $secondColor;
+    padding: 1rem 2rem;
+}
+
+header {
+    min-height: 100vh;
+    background: $bg-red;
+}
+
+section {
+    height: 100vh;
+    background-color: $secondColor;
+
+    &:nth-child(2n+1) {
+        background-color: $bg-red;
+    }
+}
+
+h2 {
+    text-align: center;
+    color: $primaryColor;
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $secondColor;
+    box-shadow: 0px 5px 15px #0000001a;
+}
+
+.nav-center {
+
+    .nav-header {
+        @include flexContainer(row, center, space-between);
+
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 25px;
+        }
+
+        em {
+            color: $primaryColor;
+            font-style: normal;
+        }
+
+        .nav-toggle {
+            color: $primaryColor;
+            font-size: 25px;
+            transition: $transition;
+            cursor: pointer;
+
+            &:hover {
+                color: $bg-red;
+            }
+        }
+    }
+
+    .links-container {
+        height: 0;
+        overflow: hidden;
+        transition: $transition;
+
+        .links {
+            list-style-type: none;
+            padding: 0;
+
+            a {
+                text-decoration: none;
+                color: #000;
+                font-size: 16px;
+                background-color: $secondColor;
+                text-transform: capitalize;
+                display: block;
+                transition: $transition;
+                padding: 1.3rem 0;
+
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.banner {
+    min-height: 100vh;
+    padding: 0 2rem;
+    @include flexContainer(column, center, center);
+
+    text-align: center;
+
+    h1 {
+        color: $primaryColor;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 20px auto 40px auto;
+        max-width: 500px;
+        line-height: 20px;
+        font-size: 20px;
+    }
+
+    .btn-contact {
+        text-decoration: none;
+        color: #000;
+        border: 2px $primaryColor solid;
+        padding: 10px;
+        background-color: $secondColor;
+        transition: $transition;
+
+        &:hover {
+            background-color: $primaryColor;
+            color: $secondColor;
+        }
+    }
+}
+
+.top-link {
+    font-size: 25px;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid $primaryColor;
+    @include flexContainer(row, center, center);
+    color: #941313;
+    animation: bounce 2s ease-in-out infinite;
+
+    visibility: hidden;
+    z-index: -100;
+}
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    nav {
+        background: transparent;
+    }
+
+    .nav-center {
+        @include flexContainer(row, center, space-between);
+
+        width: 90vw;
+        max-width: 1170px;
+
+        margin: 0 auto;
+
+        .nav-header {
+            padding: 0;
+
+            .nav-toggle {
+                display: none;
+            }
+        }
+
+        .links-container {
+            height: auto !important;
+
+            .links {
+                display: flex;
+
+                a {
+                    background: transparent;
+                    color: #000;
+                    display: block;
+                    margin: 0 1rem;
+                    padding: 0;
+                }
+            }
+
+        }
+    }
+}
